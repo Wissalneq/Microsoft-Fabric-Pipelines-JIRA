@@ -26,9 +26,8 @@ Les données manipulées concernent **trois ensembles principaux** :
 ## 🏗 Architecture générale
 
 ![Architecture](images/architecture.jpg)  
-*(Remplace par l’URL ou le chemin de ton image d’architecture)*
 
-Le pipeline est basé sur **Azure Data Factory / Microsoft Fabric Data Pipelines** et est totalement paramétrable pour différents ensembles de données.
+Le pipeline est basé sur **Microsoft Fabric Data Pipelines** et est totalement paramétrable pour différents ensembles de données.
 ## ⚙️ Workflow du projet
 
 1. **Extraction**  
