@@ -1,0 +1,141 @@
+[
+    {
+        "SourceSystem": "Jira",
+        "WorkspaceSourceName": "JIRA-Data_Integration_Dev",
+        "SchemaName": "JIRA",
+        "Layer": "Bronze",
+        "ProjectFilter": [
+            "CAPLA"
+        ],
+        "TableName": "IssuesCapla",
+        "TableTargetName": "h_issues",
+        "TableSourceName": "r_issues",
+        "KeyColumn": "issue_id",
+        "FileDirectoryName": "Files",
+        "MappingFileName": "Issues_Mapping.json",
+        "IsActive": true,
+        "RelativeUrl": "search?jql=project=CAPLA&maxResults=50&startAt=pageStart",
+        "PaginationConfig": {
+            "parameterName": "pageStart",
+            "startValue": 0,
+            "endValue": 1164,
+            "stepValue": 50,
+            "rangeFormat": "RANGE:0:1164:50"
+        }
+    },
+    {
+        "SourceSystem": "Jira",
+        "WorkspaceSourceName": "JIRA-Data_Integration_Dev",
+        "SchemaName": "JIRA",
+        "Layer": "Bronze",
+        "ProjectFilter": [
+            "GIP"
+        ],
+        "TableName": "IssuesGip",
+        "TableTargetName": "h_issues",
+        "TableSourceName": "r_issues",
+        "KeyColumn": "issue_id",
+        "FileDirectoryName": "Files",
+        "MappingFileName": "Issues_Mapping.json",
+        "IsActive": true,
+        "RelativeUrl": "search?jql=project=GIP&maxResults=50&startAt=pageStart",
+        "PaginationConfig": {
+            "parameterName": "pageStart",
+            "startValue": 0,
+            "endValue": 1164,
+            "stepValue": 50,
+            "rangeFormat": "RANGE:0:1164:50"
+        }
+    },
+    {
+        "SourceSystem": "Jira",
+        "WorkspaceSourceName": "JIRA-Data_Integration_Dev",
+        "SchemaName": "JIRA",
+        "Layer": "Bronze",
+        "ProjectFilter": [
+            "GIP"
+        ],
+        "TableName": "Components",
+        "TableTargetName": "h_components",
+        "TableSourceName": "r_components",
+        "KeyColumn": "component_id",
+        "FileDirectoryName": "Files",
+        "MappingFileName": "mapping_components.json",
+        "IsActive": true,
+        "RelativeUrl": "project/GIP/components",
+        "PaginationConfig": {
+            "parameterName": "pageStart",
+            "startValue": 0,
+            "endValue": 46,
+            "stepValue": 50,
+            "rangeFormat": "RANGE:0:46:50"
+        }
+    },
+    {
+        "SourceSystem": "Jira",
+        "WorkspaceSourceName": "JIRA-Data_Integration_Dev",
+        "SchemaSourceName": "JIRA",
+        "SchemaName": "Jira",
+        "Layer": "Silver",
+        "ProjectFilter": [
+            "CAPLA",
+            "GIP"
+        ],
+        "TableName": [
+            "IssuesCapla",
+            "IssuesGip"
+        ],
+        "TableTargetName": "S_issues",
+        "TableSourceName": "h_issues",
+        "FileDirectoryName": "Files",
+        "IsActive": true
+    },
+    {
+        "SourceSystem": "Jira",
+        "WorkspaceSourceName": "JIRA-Data_Integration_Dev",
+        "SchemaSourceName": "JIRA",
+        "SchemaName": "Jira",
+        "Layer": "Silver",
+        "ProjectFilter": [
+            "GIP"
+        ],
+        "TableName": "Components",
+        "TableTargetName": "S_components",
+        "TableSourceName": "h_components",
+        "FileDirectoryName": "Files",
+        "IsActive": true
+    },
+    {
+        "SourceSystem": "Jira",
+        "WorkspaceSourceName": "JIRA-Data_Integration_Dev",
+        "SchemaSourceName": "Jira",
+        "SchemaName": "Jira",
+        "Layer": "Gold",
+        "ProjectFilter": [
+            "CAPLA",
+            "GIP"
+        ],
+        "TableName": "Issues",
+        "TableTargetName": "G_issues",
+        "TableSourceName": "S_issues",
+        "KeyColumn": "id",
+        "FileDirectoryName": "Files",
+        "IsActive": true
+    },
+    {
+        "SourceSystem": "Jira",
+        "WorkspaceSourceName": "JIRA-Data_Integration_Dev",
+        "SchemaSourceName": "Jira",
+        "SchemaName": "Jira",
+        "Layer": "Gold",
+        "ProjectFilter": [
+            "GIP"
+        ],
+        "TableName": "Components",
+        "TableTargetName": "G_components",
+        "TableSourceName": "S_components",
+        "KeyColumn": "id",
+        "FileDirectoryName": "Files",
+        "IsActive": true
+    }
+]
