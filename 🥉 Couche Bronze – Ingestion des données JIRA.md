@@ -11,6 +11,7 @@ La **couche Bronze** contient les **données brutes** extraites depuis l’API R
 
 ---
 ## ⚙️ Processus d’ingestion
+![BronzePiplinne](images/.jpg)  
 1. **Appel API**  
    - Utilisation d’un pipeline Fabric / Data Factory pour consommer l’API REST  
    - Pagination et gestion des limites de requêtes
