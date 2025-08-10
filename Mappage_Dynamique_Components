@@ -1,0 +1,95 @@
+{
+  "type": "TabularTranslator",
+  "mappings": [
+    {
+      "source": {
+        "path": "['id']"
+      },
+      "sink": {
+        "name": "component_id",
+        "type": "String"
+      }
+    },
+    {
+      "source": {
+        "path": "['name']"
+      },
+      "sink": {
+        "name": "component_name",
+        "type": "String"
+      }
+    },
+    {
+      "source": {
+        "path": "['description']"
+      },
+      "sink": {
+        "name": "description",
+        "type": "String"
+      }
+    },
+    {
+      "source": {
+        "path": "['lead']['displayName']"
+      },
+      "sink": {
+        "name": "lead_name",
+        "type": "String"
+      }
+    },
+    {
+      "source": {
+        "path": "['lead']['name']"
+      },
+      "sink": {
+        "name": "lead_username",
+        "type": "String"
+      }
+    },
+    {
+      "source": {
+        "path": "['assigneeType']"
+      },
+      "sink": {
+        "name": "assignee_type",
+        "type": "String"
+      }
+    },
+    {
+      "source": {
+        "path": "['archived']"
+      },
+      "sink": {
+        "name": "archived",
+        "type": "Boolean"
+      }
+    },
+    {
+      "source": {
+        "path": "['deleted']"
+      },
+      "sink": {
+        "name": "deleted",
+        "type": "Boolean"
+      }
+    },
+    {
+      "source": {
+        "path": "['project']"
+      },
+      "sink": {
+        "name": "project",
+        "type": "String"
+      }
+    },
+    {
+      "source": {
+        "path": "['projectId']"
+      },
+      "sink": {
+        "name": "project_id",
+        "type": "String"
+      }
+    }
+  ]
+}
