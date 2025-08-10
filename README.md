@@ -23,7 +23,12 @@ Les données manipulées concernent **trois ensembles principaux** :
 - **Architecture Medallion** – Bronze, Silver, Gold
 
 ---
+## 🏗 Architecture générale
 
+![Architecture](images/architecture.png)  
+*(Remplace par l’URL ou le chemin de ton image d’architecture)*
+
+Le pipeline est basé sur **Azure Data Factory / Microsoft Fabric Data Pipelines** et est totalement paramétrable pour différents ensembles de données.
 ## ⚙️ Workflow du projet
 
 1. **Extraction**  
